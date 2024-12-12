@@ -59,7 +59,7 @@
 		methods: {
 			async fetchSuggestedSchedules() {
 				try {
-					const response = await axios.get('http://localhost:8082/api/schedule/suggested/all',
+					const response = await axios.get('https://irrigation-suggester-mini-core-service.onrender.com/api/schedule/suggested/all',
 					{
 						headers: {
 						Authorization: `Bearer ${localStorage.getItem("token")}`,

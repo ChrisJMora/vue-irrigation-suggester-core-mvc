@@ -77,7 +77,7 @@
         methods: {
             async fetchIrrigationTypes() {
                 try {
-                    const response = await axios.get('http://localhost:8082/api/sprinkler/irrigation/types', {
+                    const response = await axios.get('https://irrigation-suggester-mini-core-service.onrender.com/api/sprinkler/irrigation/types', {
                         headers: {
                             Authorization: `Bearer ${localStorage.getItem("token")}`,
                         }
@@ -103,7 +103,7 @@
                     } else {
                         this.errorMessage = null;
                     }
-                    const response = await axios.post('http://localhost:8082/api/crop/create', this.newCrop, {
+                    const response = await axios.post('https://irrigation-suggester-mini-core-service.onrender.com/api/crop/create', this.newCrop, {
                         headers: {
                             Authorization: `Bearer ${localStorage.getItem("token")}`,
                             'Content-Type': 'application/json',

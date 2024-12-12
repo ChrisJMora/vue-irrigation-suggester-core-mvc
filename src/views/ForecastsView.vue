@@ -49,7 +49,7 @@
 
 			async setRandomForecast() {
                 try {
-                    const response = await axios.post('http://localhost:8082/api/forecast/random', {}, {
+                    const response = await axios.post('https://irrigation-suggester-mini-core-service.onrender.com/api/forecast/random', {}, {
                         headers: {
                             Authorization: `Bearer ${localStorage.getItem("token")}`,
                             'Content-Type': 'application/json',
@@ -76,7 +76,7 @@
 
 			async fetchForecasts() {
 				try {
-                    const response = await axios.get('http://localhost:8082/api/forecast/all',
+                    const response = await axios.get('https://irrigation-suggester-mini-core-service.onrender.com/api/forecast/all',
                     {
                         headers: {
                         Authorization: `Bearer ${localStorage.getItem("token")}`,

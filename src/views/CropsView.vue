@@ -59,7 +59,7 @@
       	methods: {
 			async fetchCrops() {
                 try {
-                    const response = await axios.get('http://localhost:8082/api/crop/all',
+                    const response = await axios.get('https://irrigation-suggester-mini-core-service.onrender.com/api/crop/all',
                     {
                         headers: {
                         Authorization: `Bearer ${localStorage.getItem("token")}`,

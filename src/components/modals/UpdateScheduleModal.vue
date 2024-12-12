@@ -67,7 +67,7 @@
                 try {
                     this.scheduleData.id = this.scheduleId;
                     this.scheduleData.endTime = TimeService.calculateEndTime(this.scheduleData.startTime, this.duration);
-                    const response = await axios.post('http://localhost:8082/api/schedule/update', this.scheduleData, {
+                    const response = await axios.post('https://irrigation-suggester-mini-core-service.onrender.com/api/schedule/update', this.scheduleData, {
                         headers: {
                             Authorization: `Bearer ${localStorage.getItem("token")}`,
                             'Content-Type': 'application/json',

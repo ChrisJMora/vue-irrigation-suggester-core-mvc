@@ -59,7 +59,7 @@
 
 			async acceptSchedule() {
 				try {
-					const response = await axios.post(`http://localhost:8082/api/schedule/suggested/accept?id=${this.suggestedScheduleId}`, {}, {
+					const response = await axios.post(`https://irrigation-suggester-mini-core-service.onrender.com/api/schedule/suggested/accept?id=${this.suggestedScheduleId}`, {}, {
 						headers: {
 							Authorization: `Bearer ${localStorage.getItem("token")}`,
 							'Content-Type': 'application/json',
@@ -88,7 +88,7 @@
 				try {
 					this.scheduleData.endTime = TimeService.calculateEndTime(this.scheduleData.startTime, this.irrigationDuration);
 					this.scheduleData.cropId = this.cropId;
-					const response = await axios.post('http://localhost:8082/api/schedule/create', this.scheduleData, {
+					const response = await axios.post('https://irrigation-suggester-mini-core-service.onrender.com/api/schedule/create', this.scheduleData, {
 						headers: {
 							Authorization: `Bearer ${localStorage.getItem("token")}`,
 							'Content-Type': 'application/json',

@@ -30,7 +30,7 @@
     methods: {
       async login() {
         try {
-          const response = await axios.post('http://localhost:8082/login', {
+          const response = await axios.post('https://irrigation-suggester-mini-core-service.onrender.com/login', {
             username: this.username,
             password: this.password,
           });

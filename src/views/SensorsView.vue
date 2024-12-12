@@ -45,7 +45,7 @@
 		methods: {
 			async fetchSensorsRecords() {
 				try {
-                    const response = await axios.get('http://localhost:8082/api/sensor/all',
+                    const response = await axios.get('https://irrigation-suggester-mini-core-service.onrender.com/api/sensor/all',
                     {
                         headers: {
                         Authorization: `Bearer ${localStorage.getItem("token")}`,

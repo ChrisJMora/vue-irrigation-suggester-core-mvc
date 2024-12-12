@@ -61,7 +61,7 @@
             async updateCrop() {
                 try {
                     console.log(this.cropData.id);
-                    const response = await axios.put(`http://localhost:8082/api/crop/update/${this.cropData.id}`, this.cropData, {
+                    const response = await axios.put(`https://irrigation-suggester-mini-core-service.onrender.com/api/crop/update/${this.cropData.id}`, this.cropData, {
                         headers: {
                             Authorization: `Bearer ${localStorage.getItem("token")}`,
                             'Content-Type': 'application/json',

@@ -68,7 +68,7 @@
 		methods: {
 			async cancelSchedule(id) {
 				try {
-					const response = await axios.post(`http://localhost:8082/api/schedule/cancel`, {}, {
+					const response = await axios.post(`https://irrigation-suggester-mini-core-service.onrender.com/api/schedule/cancel`, {}, {
 						params: { id },
 						headers: {
 						Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -94,7 +94,7 @@
 
 			async fetchSchedules() {
 				try {
-					const response = await axios.get("http://localhost:8082/api/schedule/all", {
+					const response = await axios.get("https://irrigation-suggester-mini-core-service.onrender.com/api/schedule/all", {
 						headers: {
 							Authorization: `Bearer ${localStorage.getItem("token")}`,
 						},
