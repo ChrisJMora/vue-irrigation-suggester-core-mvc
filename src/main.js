@@ -8,6 +8,7 @@ import Forecasts from './views/ForecastsView.vue'
 import Schedules from './views/SchedulesView.vue'
 import Sensors from './views/SensorsView.vue'
 import SuggestedSchedules from './views/SuggestedSchedulesView.vue'
+import ReportView from './views/ReportView.vue'
 
 const routes = [
     { path: '/login', name: 'login', component: Login},
@@ -16,6 +17,7 @@ const routes = [
     { path: '/agriculture/crops', component: Crops },
     { path: '/agriculture/schedules', component: Schedules},
     { path: '/agriculture/sensors', component: Sensors},
+    { path: '/agriculture/report', component: ReportView},
 ];
 
 const router = createRouter({

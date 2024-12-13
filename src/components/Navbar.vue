@@ -7,6 +7,7 @@
           <li><a href="/agriculture/sensors">Sensores</a></li>
           <li><a href="/agriculture/schedules">Cronogramas</a></li>
           <li><a href="/agriculture/schedules/suggested">Cronogramas sugeridos</a></li>
+          <li><a href="/agriculture/report">Reporte</a></li>
         </ul>
         <button @click="logout">Cerrar sesión</button>
       </div>
